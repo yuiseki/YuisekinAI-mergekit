@@ -1,0 +1,14 @@
+genome:
+    models:
+      - NousResearch/Hermes-2-Pro-Mistral-7B
+      - PocketDoc/Dans-AdventurousWinds-Mk2-7b
+      - HuggingFaceH4/zephyr-7b-beta
+    merge_method: task_arithmetic
+    base_model: mistralai/Mistral-7B-v0.1
+    layer_granularity: 8 # sane default
+    allow_negative_weights: true # useful with task_arithmetic
+tasks:
+  - name: alpaca_prompt_format
+    weight: 0.4
+  - name: spartqa_train
+    weight: 0.6

@@ -1,0 +1,13 @@
+base_model: mistralai/Mistral-7B-v0.1
+gate_mode: hidden
+dtype: bfloat16
+experts:
+  - source_model: Rakuten/RakutenAI-7B-chat
+    positive_prompts: 
+      - "<s>あなたは誠実で優秀な日本人のアシスタントです。\n\nUser: 「馬が合う」はどう言う意味ですか"
+      - "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions.\n\nUSER: How to make an authentic Spanish Omelette?\nASSISTANT: "
+  - source_model: nvidia/OpenMath-Mistral-7B-v0.1-hf
+    positive_prompts: 
+      - "Martha has 18 crayons. She lost half of them, so she bought a new set of 20 crayons. How many crayons in total does Martha have after the purchase?"
+      - "Noa scored 30 points to win a bowl, and Phillip scores twice that number. What is the total number of points Tom and Phillip scored to win the bowl?"
+      - "In a rectangular coordinate system, what is the number of units in the distance from the origin to the point $(-15, 8)$?"

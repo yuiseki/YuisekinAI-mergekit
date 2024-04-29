@@ -1,0 +1,15 @@
+base_model: TinyLlama/TinyLlama-1.1B-intermediate-step-715k-1.5T
+gate_mode: hidden
+dtype: bfloat16
+experts:
+  - source_model: lightblue/karasu-1.1B
+    positive_prompts: 
+      - "質問と回答の選択肢を入力として受け取り、選択肢から回答を選択してください。"
+      - "前提と仮説の関係を含意、矛盾、中立の中から回答してください。"
+      - "以下のテキストを、ポジティブまたはネガティブの感情クラスのいずれかに分類してください。"
+      - "以下は、タスクを説明する指示と、文脈のある入力の組み合わせです。要求を適切に満たす応答を書きなさい。"
+  - source_model: deepseek-ai/deepseek-coder-1.3b-instruct
+    positive_prompts: 
+      - "write a quick sort algorithm in python."
+      - "write a function that takes a list of integers and returns the sum of all the integers."
+      - "write a algorithm that takes a list of integers and returns the maximum value."
