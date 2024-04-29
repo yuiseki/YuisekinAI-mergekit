@@ -2,3 +2,5 @@ output
 evol_merge_storage
 .mypy_cache
 wandb
+outcmaes
+storage

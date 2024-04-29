@@ -8,6 +8,7 @@ doc_to_text: "### Instruction:\n{instruction}\n### Response:\n{output}"
 doc_to_choice:
   - "</s>" # replace with your model's EOS token if it is different
   # and now some incorrect options
+  - "[INST]"
   - "<|im_end|>"
   - "<|im_start|>"
   - "### Instruction:"

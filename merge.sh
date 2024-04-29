@@ -1,7 +1,4 @@
-mergekit-evolve ./evol_merge_config.yml \
-    --storage-path ./evol_merge_storage \
-    --task-search-path ./eval_tasks \
+mergekit-yaml evol_merge_storage/best_config.yaml \
+    --cuda \
     --trust-remote-code \
-    --in-memory \
-    --merge-cuda \
-    --wandb
+    ./output/tmp

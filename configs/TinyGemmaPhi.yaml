@@ -1,0 +1,16 @@
+genome:
+    models:
+      - Rakuten/RakutenAI-7B-chat
+      - meta-math/MetaMath-Mistral-7B
+      - mistralai/Mistral-7B-Instruct-v0.2
+    merge_method: task_arithmetic
+    base_model: mistralai/Mistral-7B-Instruct-v0.2
+    layer_granularity: 4 # sane default
+    allow_negative_weights: true # useful with task_arithmetic
+tasks:
+  - name: alpaca_prompt_format
+    weight: 0.2
+  - name: jglue_jcommonsenseqa_train
+    weight: 0.4
+  - name: mathqa
+    weight: 0.4

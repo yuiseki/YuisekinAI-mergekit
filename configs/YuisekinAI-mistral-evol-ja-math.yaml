@@ -1,0 +1,17 @@
+model_name: YuisekinAIEvol-Mistral-7B-ja-math-v0.1.1-1k
+genome:
+    models:
+      - Rakuten/RakutenAI-7B-chat
+      - nvidia/OpenMath-Mistral-7B-v0.1-hf
+      - mistralai/Mistral-7B-Instruct-v0.2
+    merge_method: task_arithmetic
+    base_model: mistralai/Mistral-7B-Instruct-v0.2
+    layer_granularity: 4
+    allow_negative_weights: true # useful with task_arithmetic
+tasks:
+  - name: alpaca_prompt_format
+    weight: 0.2
+  - name: jglue_jcommonsenseqa_train
+    weight: 0.4
+  - name: math_qa_train
+    weight: 0.4
