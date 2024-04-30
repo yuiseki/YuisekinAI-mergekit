@@ -19,4 +19,3 @@ no_input = df[df.input.map(len) < 1]
 examples = no_input.sample(n=500, replace=False, random_state=749)
 ds_p = datasets.Dataset.from_pandas(examples)
 ds_p.push_to_hub("yuiseki/alpaca-gpt4-500", private=True)
-

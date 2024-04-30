@@ -1,4 +1,4 @@
-mergekit-evolve ./configs/YuisekinAI-mistral-evol-ja-math.yaml \
+mergekit-evolve ./configs/evolve/YuisekinAI-mistral-evol-ja-math.yaml \
     --storage-path ./evol_merge_storage \
     --task-search-path ./eval_tasks \
     --trust-remote-code \
