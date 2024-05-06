@@ -1,0 +1,18 @@
+model_name: YuisekinAIEvol-Mistral-7B-ja-coder-dolphin-v0.1
+genome:
+    models:
+      - Rakuten/RakutenAI-7B-instruct
+      - cognitivecomputations/dolphin-2.6-mistral-7b
+      - mistralai/Mistral-7B-Instruct-v0.2
+    merge_method: task_arithmetic
+    base_model: Rakuten/RakutenAI-7B-instruct
+    tokenizer_source: base
+    layer_granularity: 4
+    allow_negative_weights: true # useful with task_arithmetic
+tasks:
+  - name: alpaca_prompt_format
+    weight: 0.1
+  - name: jglue_jcommonsenseqa_train
+    weight: 0.45
+  - name: sql_train
+    weight: 0.45

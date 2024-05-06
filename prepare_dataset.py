@@ -12,6 +12,10 @@ ds = datasets.load_dataset("math_qa")["train"]
 ds_p = ds.shuffle(seed=9163).select(range(1000))
 ds_p.push_to_hub("yuiseki/math_qa-train-1k", private=True)
 
+ds = datasets.load_dataset("b-mc2/sql-create-context")["train"]
+ds_p = ds.shuffle(seed=9163).select(range(1000))
+ds_p.push_to_hub("yuiseki/sql-create-context-train-1k", private=True)
+
 ds = datasets.load_dataset("vicgalle/alpaca-gpt4")["train"]
 df = ds.to_pandas()
 
